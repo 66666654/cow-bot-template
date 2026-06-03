@@ -42,7 +42,7 @@ cp config.example.toml config.toml
 编辑 `config.toml`，填三个东西：
 
 ```toml
-ANTHROPIC_AUTH_TOKEN = "sk-xxx"           # DeepSeek 或 Anthropic API Key
+ANTHROPIC_AUTH_TOKEN = "你的API密钥"      # DeepSeek 或 Anthropic API Key
 token = "xxx@im.bot:xxx"                  # 微信 Bot Token
 account_id = "xxx@im.bot"                 # 微信 Bot 账号 ID
 ```
