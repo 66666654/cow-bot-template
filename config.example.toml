@@ -1,0 +1,48 @@
+# cc-connect — 微信 Bot 桥接配置
+# 复制此文件为 config.toml 并填入你的信息
+
+data_dir = "./data"
+language = "zh"
+
+[display]
+mode = "quiet"
+thinking_messages = false
+tool_messages = false
+show_context_indicator = false
+reply_footer = false
+
+[log]
+level = "info"
+
+[[projects]]
+name = "bot1"
+
+[projects.agent]
+type = "claudecode"
+
+[projects.agent.options]
+work_dir = "你的工作空间路径"
+mode = "bypassPermissions"
+cmd = "claude"
+
+[projects.agent.options.env]
+ANTHROPIC_AUTH_TOKEN = "你的API Key"
+ANTHROPIC_BASE_URL = "https://api.deepseek.com/anthropic"
+ANTHROPIC_MODEL = "deepseek-v4-flash"
+ANTHROPIC_DEFAULT_SONNET_MODEL = "deepseek-v4-flash"
+ANTHROPIC_DEFAULT_OPUS_MODEL = "deepseek-v4-pro"
+ANTHROPIC_DEFAULT_HAIKU_MODEL = "deepseek-v4-flash"
+
+[[projects.platforms]]
+type = "weixin"
+
+[projects.platforms.options]
+allow_from = "*"
+token = "你的微信Bot Token"
+base_url = "https://ilinkai.weixin.qq.com"
+account_id = "你的微信Bot账号ID"
+
+# ── 多 Bot 示例（可选）──
+# [[projects]]
+# name = "bot2"
+# ... 同上配置第二个 Bot ...
