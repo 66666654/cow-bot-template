@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "updated_at": "",
+  "tasks": {
+    "morning_greeting": {
+      "id": "morning_greeting",
+      "name": "早安问候",
+      "enabled": true,
+      "schedule": {"type": "cron", "expression": "0 8 * * *"},
+      "action": {
+        "type": "agent_task",
+        "task_description": "向对方发送早安问候，语气自然随意，每次换不同的表达方式。2-3句话即可。",
+        "receiver": "对方微信ID",
+        "receiver_name": "对方微信ID",
+        "is_group": false,
+        "channel_type": "weixin",
+        "notify_session_id": "对方微信ID"
+      }
+    },
+    "noon_greeting": {
+      "id": "noon_greeting",
+      "name": "午安问候",
+      "enabled": true,
+      "schedule": {"type": "cron", "expression": "15 12 * * *"},
+      "action": {
+        "type": "agent_task",
+        "task_description": "向对方发送午间问候，提醒按时吃饭休息。语气温柔自然。2-3句话。",
+        "receiver": "对方微信ID",
+        "receiver_name": "对方微信ID",
+        "is_group": false,
+        "channel_type": "weixin",
+        "notify_session_id": "对方微信ID"
+      }
+    },
+    "random_1": {
+      "id": "random_1",
+      "name": "随机互动①",
+      "enabled": true,
+      "schedule": {"type": "cron", "expression": "30 16 * * *"},
+      "action": {
+        "type": "agent_task",
+        "task_description": "下午时段随机互动。可以突然问一个有趣的问题，或者吐槽一下日常，或者分享一点小事。像真人朋友突然来聊天的感觉。2-4句话。",
+        "receiver": "对方微信ID",
+        "receiver_name": "对方微信ID",
+        "is_group": false,
+        "channel_type": "weixin",
+        "notify_session_id": "对方微信ID"
+      }
+    }
+  }
+}
