@@ -1,0 +1,44 @@
+# 敏感信息
+config.toml
+*.env
+.env.*
+credentials*.json
+*.key
+*.pem
+
+# API Keys
+*_api_key*
+*_token*
+
+# 工作空间
+data/
+tmp/
+memory/
+knowledge/
+logs/
+*.log
+
+# 用户数据
+USER.md
+MEMORY.md
+表情包/*.jpg
+表情包/*.png
+表情包/*.gif
+表情包/*.webp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
